@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "6e0c6f6c-b665-4ad5-afd7-79fa0ffc8ce6",
+		"name": "CRUD clientes categoria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44604460",
+		"_collection_link": "https://adriancamilo.postman.co/workspace/Adrian-Camilo-'s-Workspace~c0214986-80d4-4659-8564-61d266af0b18/collection/44604460-6e0c6f6c-b665-4ad5-afd7-79fa0ffc8ce6?action=share&source=collection_link&creator=44604460"
+	},
+	"item": [
+		{
+			"name": "Listar Servicios",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Servicios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 20,\r\n        \"nombre\": \"Low taper fade\",\r\n        \"descripcion\": \"Corte de cabello con degradado bajo en base y laterales\",\r\n        \"precio\": 20000.0,\r\n        \"duracion\": 45,\r\n        \"imagenUrl\": \"https://i.pinimg.com/736x/4b/a1/04/4ba1046bbc1b060eb2db67a2621c3845.jpg\",\r\n        \"objCategoria\": {\r\n            \"id\": 1,\r\n            \"nombre\": \"Corte\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarServicios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/clientes/5",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"clientes",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/clientes/2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"clientes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarCliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{        \r\n    \"nombre\": \"Neymar Nuevo\",\r\n    \"apellido\": \"Junior Nuevo\",\r\n    \"email\": \"neymarNuevo@unicauca.edu.co\",        \r\n    \"objCategoria\": {\r\n        \"id\": 1            \r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/clientes/4",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"clientes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar categorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4200/api/categorias",
+					"host": [
+						"localhost"
+					],
+					"port": "4200",
+					"path": [
+						"api",
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
